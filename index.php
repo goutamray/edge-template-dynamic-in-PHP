@@ -132,10 +132,11 @@
         class="carousel slide"
         data-ride="carousel">
         <div class="carousel-inner">
-
-          < <?php foreach($slider as $slide) : ?>
+          < <?php 
+           $i = 0;
+          foreach($slider as $slide) : ?>
             <div
-            class="carousel-item <?php echo $slider[0]["title"] == $slide["title"] ? "active" : ""?>">
+            class="carousel-item <?php echo $i == 0 ? "active" : ""; $i++ ?>">
             <div class="container ">
               <div class="row">
                 <div class="col-md-5">
